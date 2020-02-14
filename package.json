@@ -1,0 +1,24 @@
+{
+  "name": "plotly-panel",
+  "version": "1.0.0",
+  "description": "Grafana RSS Panel",
+  "scripts": {
+    "build": "grafana-toolkit plugin:build",
+    "test": "grafana-toolkit plugin:test",
+    "dev": "grafana-toolkit plugin:dev",
+    "watch": "grafana-toolkit plugin:dev --watch"
+  },
+  "author": "Grafana Labs",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@grafana/data": "6.5.3",
+    "@grafana/toolkit": "6.5.3",
+    "@grafana/ui": "6.5.3"
+  },
+  "dependencies": {
+    "plotly.js": "^1.52.1",
+    "react-ace": "^8.0.0",
+    "react-chart-editor": "^0.41.0",
+    "react-plotly.js": "^2.4.0"
+  }
+}

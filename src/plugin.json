@@ -1,0 +1,29 @@
+{
+  "type": "panel",
+  "name": "Plotly",
+  "id": "plotly-panel",
+
+  "info": {
+    "description": "Simple React Panel",
+    "author": {
+      "name": "Your Name"
+    },
+    "keywords": ["Simple"],
+    "logos": {
+      "small": "img/plotly.svg",
+      "large": "img/plotly.svg"
+    },
+    "links": [
+      {"name": "Website", "url": "https://github.com/grafana/simple-react-panel"},
+      {"name": "License", "url": "https://github.com/grafana/simple-react-panel/blob/master/LICENSE"}
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "6.3.x",
+    "plugins": []
+  }
+}
