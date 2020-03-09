@@ -6,8 +6,9 @@ import { SimpleOptions } from './types';
 
 import AceEditor from 'react-ace';
 
-import 'ace-builds/src-noconflict/mode-javascript';
-import 'ace-builds/src-noconflict/theme-tomorrow';
+import 'brace/mode/javascript';
+import 'brace/theme/tomorrow';
+import 'brace/theme/github';
 
 export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>> {
   onTextChanged = (evt: any) => {
@@ -17,7 +18,7 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
     });
   };
 
-  onLayoutChanged = (evt: any, editor: any) => {
+  onLayoutChanged = (evt: any, editor?) => {
     console.log(editor.getValue());
     this.props.onOptionsChange({
       ...this.props.options,
@@ -25,14 +26,14 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
     });
   };
 
-  onDataChanged = (evt: any, editor: any) => {
+  onDataChanged = (evt: any, editor?) => {
     this.props.onOptionsChange({
       ...this.props.options,
       data: JSON.parse(editor.getValue()),
     });
   };
 
-  onScriptChanged = (evt: any, editor: any) => {
+  onScriptChanged = (evt: any, editor?) => {
     this.props.onOptionsChange({
       ...this.props.options,
       script: editor.getValue(),
@@ -51,7 +52,7 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
           <FormLabel>{'Data'}</FormLabel>
           <AceEditor
             mode="javascript"
-            theme="tomorrow"
+            theme="github"
             name="dashboard_script"
             height="150px"
             value={JSON.stringify(this.props.options.data, null, 4)}

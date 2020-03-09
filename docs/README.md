@@ -10,4 +10,9 @@ After building the plugin, the following error can popup :
 
 ![Build error](img1.png)
 
-Grafan must be upgraded. See [Github issue](https://github.com/grafana/grafana/issues/21770)
+Grafana must be upgraded. See [Github issue](https://github.com/grafana/grafana/issues/21770)
+
+-----
+Grafana 6.5.3
+Problem : Text editors in existing plugins (mainly datasources : sql editor for Postgres) doesn't show up. Conflict with ace in my plugin?
+Solution: Must use react-ace@6.2.2 because ace version is the same one used by Grafan (in Angular component?)

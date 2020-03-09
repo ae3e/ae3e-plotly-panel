@@ -29,6 +29,9 @@ export class SimplePanel extends PureComponent<Props> {
       if (this.props.options.script !== '') {
         var f = new Function('data,dist', this.props.options.script);
         data2 = f(this.props.data, this.props.replaceVariables('$distance'));
+      }else{
+        console.log(this.props.options.data)
+        data2 = this.props.options.data;
       }
     } catch (e) {
       console.log(e);

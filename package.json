@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "plotly.js": "^1.52.1",
-    "react-ace": "^8.0.0",
+    "react-ace": "6.2.2",
     "react-chart-editor": "^0.41.0",
     "react-plotly.js": "^2.4.0"
   }
