@@ -11,14 +11,18 @@
   "author": "Grafana Labs",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@grafana/data": "6.5.3",
-    "@grafana/toolkit": "6.5.3",
-    "@grafana/ui": "6.5.3"
+    "@grafana/data": "6.7.1",
+    "@grafana/toolkit": "6.7.1",
+    "@grafana/ui": "6.7.1",
+    "@babel/preset-env": "7.5.5"
   },
   "dependencies": {
-    "plotly.js": "^1.52.1",
+    "plotly.js": "1.52.1",
     "react-ace": "6.2.2",
-    "react-chart-editor": "^0.41.0",
-    "react-plotly.js": "^2.4.0"
+    "react-chart-editor": "0.41.0",
+    "react-plotly.js": "2.4.0"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.5.5"
   }
 }
