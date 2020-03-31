@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
-import { PanelOptionsGroup, FormField, FormLabel } from '@grafana/ui';
+import { PanelOptionsGroup, FormLabel } from '@grafana/ui';
 import { PanelEditorProps } from '@grafana/data';
+import {config} from '@grafana/runtime'
 
 import { SimpleOptions } from './types';
 
@@ -8,6 +9,7 @@ import AceEditor from 'react-ace';
 
 import 'brace/mode/javascript';
 import 'brace/theme/tomorrow';
+import 'brace/theme/tomorrow_night';
 import 'brace/theme/github';
 
 export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>> {
@@ -43,16 +45,17 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
   onTypeChanged = (evt: any) => {};
 
   render() {
+    let theme = config.theme.isDark?"tomorrow_night":"tomorrow";
+
     return (
       <PanelOptionsGroup title="My Panel Options">
-        <FormField label="Title" value={this.props.options.title} onChange={this.onTextChanged} />
+        {/*<FormField label="Title" value={this.props.options.title} onChange={this.onTextChanged} />*/}
 
-        <br />
         <div className="form-field">
           <FormLabel>{'Data'}</FormLabel>
           <AceEditor
             mode="javascript"
-            theme="github"
+            theme={theme}
             name="dashboard_script"
             height="150px"
             value={JSON.stringify(this.props.options.data, null, 4)}
@@ -64,7 +67,7 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
           <FormLabel>{'Layout'}</FormLabel>
           <AceEditor
             mode="javascript"
-            theme="tomorrow"
+            theme={theme}
             name="dashboard_script"
             height="150px"
             value={JSON.stringify(this.props.options.layout, null, 4)}
@@ -76,7 +79,7 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
           <FormLabel>{'Script'}</FormLabel>
           <AceEditor
             mode="javascript"
-            theme="tomorrow"
+            theme={theme}
             name="dashboard_script"
             height="150px"
             value={this.props.options.script}
