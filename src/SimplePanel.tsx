@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
-import { PanelProps } from '@grafana/data';
+import { PanelProps,DataSourceApi  } from '@grafana/data';
+import {getDataSourceSrv } from '@grafana/runtime'
 import { SimpleOptions } from 'types';
 
 // tslint:disable
@@ -21,14 +22,22 @@ export class SimplePanel extends PureComponent<Props> {
     console.log(this);
     console.log(this.props.replaceVariables('$distance'));
     //console.log(this.props.replaceVariables('$__to'+' '+'$__from'));
-
+    let dataSource:any = getDataSourceSrv() as unknown as DataSourceApi;
+    console.log(dataSource.templateSrv.variables)
+    //Get all variables
+    const context = {
+      interval: dataSource.templateSrv.builtIns.__interval.value,
+    } as any;
+    dataSource.templateSrv.variables.forEach((elt: any)=>{
+      context[elt.name]=elt.current.text;
+    })
     let data2: any[] = [];
     //const NbValues = data.series[0].rows.length;
 
     try {
       if (this.props.options.script !== '') {
-        var f = new Function('data,dist', this.props.options.script);
-        data2 = f(this.props.data, this.props.replaceVariables('$distance'));
+        var f = new Function('data,variables', this.props.options.script);
+        data2 = f(this.props.data, context);
       }else{
         console.log(this.props.options.data)
         data2 = this.props.options.data;
