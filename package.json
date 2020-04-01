@@ -17,6 +17,7 @@
     "@grafana/ui": "6.7.1"
   },
   "dependencies": {
+    "deepmerge": "^4.2.2",
     "plotly.js": "1.52.1",
     "react-ace": "6.2.2",
     "react-chart-editor": "0.41.0",

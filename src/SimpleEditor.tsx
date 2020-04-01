@@ -35,6 +35,14 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
     });
   };
 
+  onConfigChanged = (evt: any, editor?) => {
+    console.log(editor.getValue());
+    this.props.onOptionsChange({
+      ...this.props.options,
+      config: JSON.parse(editor.getValue()),
+    });
+  };
+
   onScriptChanged = (evt: any, editor?) => {
     this.props.onOptionsChange({
       ...this.props.options,
@@ -56,22 +64,36 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
           <AceEditor
             mode="javascript"
             theme={theme}
-            name="dashboard_script"
+            name="dashboard_data"
             height="150px"
             value={JSON.stringify(this.props.options.data, null, 4)}
             onBlur={this.onDataChanged}
           />
-        </div>
-        <br />
-        <div className="form-field">
-          <FormLabel>{'Layout'}</FormLabel>
+
+<FormLabel>{'Layout'}</FormLabel>
           <AceEditor
             mode="javascript"
             theme={theme}
-            name="dashboard_script"
+            name="dashboard_layout"
             height="150px"
             value={JSON.stringify(this.props.options.layout, null, 4)}
             onBlur={this.onLayoutChanged}
+          />
+        </div>
+        <br />
+        <div className="form-field">
+          
+        </div>
+        <br />
+        <div className="form-field">
+          <FormLabel>{'Config'}</FormLabel>
+          <AceEditor
+            mode="javascript"
+            theme={theme}
+            name="dashboard_config"
+            height="150px"
+            value={JSON.stringify(this.props.options.config, null, 4)}
+            onBlur={this.onConfigChanged}
           />
         </div>
         <br />
