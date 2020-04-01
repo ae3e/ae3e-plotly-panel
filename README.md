@@ -2,7 +2,7 @@
 
 [https://github.com/ae3e/plotly-panel](https://github.com/ae3e/plotly-panel)
 
-Built chart from any datasource with [Plotly](https://plotly.com/javascript/) (An open source javascript graphing library)
+Render chart from any datasource with [Plotly](https://plotly.com/javascript/) (An open source javascript graphing library)
 
 Unlike the [natel-plotly-panel](https://github.com/NatelEnergy/grafana-plotly-panel), this plugin is not limited to specific types of charts. But, on the other hand, the user interface is really rough in order to let users to set all options available in Plotly.
 
