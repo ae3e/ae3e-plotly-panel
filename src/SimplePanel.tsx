@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { PanelProps,DataSourceApi  } from '@grafana/data';
 import {getDataSourceSrv } from '@grafana/runtime'
 import { SimpleOptions } from 'types';
+import _ from 'lodash';
 
 // tslint:disable
 import Plot from 'react-plotly.js';
@@ -11,9 +12,26 @@ import Plotly from 'plotly.js/dist/plotly';
 declare global {
   interface Window {
     Plotly: any;
+    updateVariable: any;
   }
 }
 window.Plotly = Plotly;
+
+let dataSource:any = getDataSourceSrv() as unknown as DataSourceApi;
+window.updateVariable=function(varname:string, path:string) {
+  console.log('update variable', varname, path );
+  let v = _.find(dataSource.templateSrv.variables, check => {
+    return check.name === varname;
+  });
+  console.log(v);
+  if(v) {
+    v.variableSrv.setOptionAsCurrent(v, {
+      text: path,
+      value: path,
+    });
+    v.variableSrv.variableUpdated(v, true);
+  }
+}
 
 interface Props extends PanelProps<SimpleOptions> {}
 
@@ -22,7 +40,7 @@ export class SimplePanel extends PureComponent<Props> {
     console.log(this);
     console.log(this.props.replaceVariables('$distance'));
     //console.log(this.props.replaceVariables('$__to'+' '+'$__from'));
-    let dataSource:any = getDataSourceSrv() as unknown as DataSourceApi;
+    
     console.log(dataSource.templateSrv.variables)
     //Get all variables
     const context = {
@@ -72,6 +90,7 @@ export class SimplePanel extends PureComponent<Props> {
         layout={layout}
         config={{ displayModeBar: false }}
         useResizeHandler={true}
+        onClick={data=>console.log(data)}
       ></Plot>
     );
   }
