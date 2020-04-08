@@ -1,21 +1,20 @@
 {
   "type": "panel",
-  "name": "Plotly",
-  "id": "plotly-panel",
+  "name": "Plotly panel",
+  "id": "ae3e-plotly-panel",
 
   "info": {
-    "description": "Simple React Panel",
+    "description": "Render chart from any datasource with Plotly javascript library",
     "author": {
-      "name": "Your Name"
+      "name": "AE3E"
     },
-    "keywords": ["Simple"],
+    "keywords": ["Plotly"],
     "logos": {
       "small": "img/plotly.svg",
       "large": "img/plotly.svg"
     },
     "links": [
-      {"name": "Website", "url": "https://github.com/grafana/simple-react-panel"},
-      {"name": "License", "url": "https://github.com/grafana/simple-react-panel/blob/master/LICENSE"}
+      {"name": "Website", "url": "https://github.com/ae3e/ae3e-plotly-panel"}
     ],
     "screenshots": [],
     "version": "%VERSION%",
@@ -23,7 +22,7 @@
   },
 
   "dependencies": {
-    "grafanaVersion": "6.3.x",
+    "grafanaVersion": "6.7.x",
     "plugins": []
   }
 }

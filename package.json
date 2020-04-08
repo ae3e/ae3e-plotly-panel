@@ -1,13 +1,13 @@
 {
-  "name": "plotly-panel",
-  "version": "1.0.0",
-  "description": "Grafana RSS Panel",
+  "name": "ae3e-plotly-panel",
+  "version": "0.1.0",
+  "description": "Grafana Plotly Panel",
   "scripts": {
     "build": "grafana-toolkit plugin:build",
     "test": "grafana-toolkit plugin:test",
     "dev": "grafana-toolkit plugin:dev --watch"
   },
-  "author": "Grafana Labs",
+  "author": "AE3E",
   "license": "Apache-2.0",
   "devDependencies": {
     "@babel/preset-env": "7.5.5",

@@ -1,6 +1,6 @@
 # Plotly Panel
 
-[https://github.com/ae3e/plotly-panel](https://github.com/ae3e/plotly-panel)
+[https://github.com/ae3e/ae3e-plotly-panel](https://github.com/ae3e/ae3e-plotly-panel)
 
 Render chart from any datasource with [Plotly](https://plotly.com/javascript/) (An open source javascript graphing library)
 
