@@ -50,6 +50,13 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
     });
   };
 
+  onClickChanged = (evt: any, editor?) => {
+    this.props.onOptionsChange({
+      ...this.props.options,
+      onclick: editor.getValue(),
+    });
+  };
+
   onTypeChanged = (evt: any) => { };
 
   render() {
@@ -121,6 +128,24 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
             width="100%"
             value={this.props.options.script}
             onBlur={this.onScriptChanged}
+          />
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <div className="section gf-form-group"  style={{ display: 'block', width: '100%' }}>
+          <h5 className="section-heading">on Click Function</h5>
+          <div className="gf-form-inline"  style={{ display: 'block', width: '100%' }}>
+            <div className="gf-form">
+            <AceEditor
+            mode="javascript"
+            theme={theme}
+            name="dashboard_onclick"
+            height="150px"
+            width="100%"
+            value={this.props.options.onclick}
+            onBlur={this.onClickChanged}
           />
             </div>
           </div>

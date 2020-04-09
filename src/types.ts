@@ -4,6 +4,7 @@ export interface SimpleOptions {
   config:object;
   data: any[];
   script: string;
+  onclick:string;
 }
 
 export const defaults: SimpleOptions = {
@@ -18,4 +19,5 @@ export const defaults: SimpleOptions = {
     },
   ],
   script: '',
+  onclick:''
 };

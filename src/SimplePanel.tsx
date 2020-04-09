@@ -106,7 +106,11 @@ export class SimplePanel extends PureComponent<Props> {
         layout={parameters.layout?merge(layout,parameters.layout):layout}
         config={parameters.config?merge(this.props.options.config,parameters.config):this.props.options.config}
         useResizeHandler={true}
-        onClick={data=>console.log(data)}
+        onClick={data=>{
+          //console.log(data)
+          var f = new Function('data', this.props.options.onclick);
+          f(data);
+        }}
       ></Plot>
     );
   }
