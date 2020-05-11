@@ -133,7 +133,6 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
           </div>
         </div>
 
-        <br />
         <div className="section gf-form-group"  style={{ display: 'block', width: '100%' }}>
           <h5 className="section-heading">on Click Function</h5>
           <div className="gf-form-inline"  style={{ display: 'block', width: '100%' }}>
