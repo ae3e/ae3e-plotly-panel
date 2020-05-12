@@ -29,3 +29,11 @@ Solution :
 } to package.json.
 3. run `npx npm-force-resolutions`
 4. npm `install`.
+
+-----
+Grafana 7.0.0-beta.3
+Must change file /node-modules/@grafana/toolkit/bin/grafana-toolkit.js because pwd is undefined on Windows 10 (see [PR #24331](https://github.com/grafana/grafana/pull/24331))
+
+line 13 :
+
+`if (pwd!==undefined && path.basename(pwd) === 'grafana-toolkit') {`

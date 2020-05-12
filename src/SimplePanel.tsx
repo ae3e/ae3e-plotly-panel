@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import { PanelProps,DataSourceApi  } from '@grafana/data';
-import {getDataSourceSrv } from '@grafana/runtime'
+import { PanelProps } from '@grafana/data';
+import { getTemplateSrv, getLocationSrv } from '@grafana/runtime'
 import { SimpleOptions } from 'types';
 import merge from 'deepmerge';
 import _ from 'lodash';
@@ -13,26 +13,13 @@ import Plotly from 'plotly.js/dist/plotly';
 declare global {
   interface Window {
     Plotly: any;
-    updateVariable: any;
+    updateVariables: any;
   }
 }
 window.Plotly = Plotly;
+window.updateVariables = getLocationSrv().update;
 
-let dataSource:any = getDataSourceSrv() as unknown as DataSourceApi;
-window.updateVariable=function(varname:string, path:string) {
-  console.log('update variable', varname, path );
-  let v = _.find(dataSource.templateSrv.variables, check => {
-    return check.name === varname;
-  });
-  console.log(v);
-  if(v) {
-    v.variableSrv.setOptionAsCurrent(v, {
-      text: path,
-      value: path,
-    });
-    v.variableSrv.variableUpdated(v, true);
-  }
-}
+let templateSrv:any = getTemplateSrv();
 
 interface Props extends PanelProps<SimpleOptions> {}
 
@@ -42,12 +29,12 @@ export class SimplePanel extends PureComponent<Props> {
     console.log(this.props.replaceVariables('$distance'));
     //console.log(this.props.replaceVariables('$__to'+' '+'$__from'));
     
-    console.log(dataSource.templateSrv.variables)
+    console.log(templateSrv.getVariables())
     //Get all variables
     const context = {
-      interval: dataSource.templateSrv.builtIns.__interval.value,
+      interval: templateSrv.getBuiltInIntervalValue(),//dataSource.templateSrv.builtIns.__interval.value,
     } as any;
-    dataSource.templateSrv.variables.forEach((elt: any)=>{
+    templateSrv.getVariables().forEach((elt: any)=>{
       context[elt.name]=elt.current.text;
     })
     let parameters: any;
