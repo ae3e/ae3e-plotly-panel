@@ -1,0 +1,120 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": 1,
+    "iteration": 1589284199606,
+    "links": [],
+    "panels": [
+      {
+        "datasource": "-- Grafana --",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 11,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "config": {
+            "displayModeBar": false
+          },
+          "data": [
+            {
+              "marker": {
+                "color": "red"
+              },
+              "mode": "lines+points",
+              "type": "scatter"
+            }
+          ],
+          "layout": {
+            "font": {
+              "color": "darkgrey"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "xaxis": {
+              "type": "date"
+            }
+          },
+          "onclick": "console.log(data)\nwindow.updateVariables({query:{'var-project':'toti'}, partial: true})",
+          "script": "console.log(data)\r\nvar trace = {\r\n  x: data.series[0].fields[0].values.buffer,\r\n  y: data.series[0].fields[1].values.buffer\r\n};\r\n\r\n\r\nreturn {data:[trace],layout:{title:'My Chart'}};",
+          "title": "title"
+        },
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Panel Title",
+        "type": "ae3e-plotly-panel"
+      }
+    ],
+    "schemaVersion": 25,
+    "style": "dark",
+    "tags": [
+      "dev"
+    ],
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "selected": false,
+            "text": "Facebook",
+            "value": "Facebook"
+          },
+          "hide": 0,
+          "label": null,
+          "name": "project",
+          "options": [
+            {
+              "selected": false,
+              "text": "grafana",
+              "value": "grafana"
+            }
+          ],
+          "query": "grafana",
+          "skipUrlSync": false,
+          "type": "textbox"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-15m",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ]
+    },
+    "timezone": "",
+    "title": "ae3e-plotly-panel",
+    "uid": "8s0myMRMz",
+    "version": 3
+  }

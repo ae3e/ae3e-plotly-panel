@@ -1,0 +1,28 @@
+{
+  "type": "panel",
+  "name": "Plotly panel",
+  "id": "ae3e-plotly-panel",
+
+  "info": {
+    "description": "Render chart from any datasource with Plotly javascript library",
+    "author": {
+      "name": "AE3E"
+    },
+    "keywords": ["Plotly"],
+    "logos": {
+      "small": "img/plotly.svg",
+      "large": "img/plotly.svg"
+    },
+    "links": [
+      {"name": "Website", "url": "https://github.com/ae3e/ae3e-plotly-panel"}
+    ],
+    "screenshots": [],
+    "version": "0.2.1",
+    "updated": "2020-07-31"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "7.1.x",
+    "plugins": []
+  }
+}

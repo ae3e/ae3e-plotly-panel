@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { PanelOptionsGroup } from '@grafana/ui';
+
 import { PanelEditorProps } from '@grafana/data';
 import { config } from '@grafana/runtime'
 
@@ -63,8 +63,7 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
     let theme = config.theme.isDark ? "tomorrow_night" : "tomorrow";
 
     return (
-
-      <PanelOptionsGroup title="Options">
+      <div>
         {/*<FormField label="Title" value={this.props.options.title} onChange={this.onTextChanged} />*/}
 
         <div className="section gf-form-group">
@@ -91,7 +90,6 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
                 theme={theme}
                 name="dashboard_layout"
                 height="150px"
-                width="350px"
                 value={JSON.stringify(this.props.options.layout, null, 4)}
                 onBlur={this.onLayoutChanged}
               />
@@ -107,7 +105,6 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
                 theme={theme}
                 name="dashboard_config"
                 height="150px"
-                width="300px"
                 value={JSON.stringify(this.props.options.config, null, 4)}
                 onBlur={this.onConfigChanged}
               />
@@ -115,17 +112,15 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
           </div>
         </div>
 
-        <br />
-        <div className="section gf-form-group"  style={{ display: 'block', width: '100%' }}>
+        <div className="section gf-form-group">
           <h5 className="section-heading">Script</h5>
-          <div className="gf-form-inline"  style={{ display: 'block', width: '100%' }}>
+          <div className="gf-form-inline">
             <div className="gf-form">
             <AceEditor
             mode="javascript"
             theme={theme}
             name="dashboard_script"
             height="150px"
-            width="100%"
             value={this.props.options.script}
             onBlur={this.onScriptChanged}
           />
@@ -133,23 +128,22 @@ export class SimpleEditor extends PureComponent<PanelEditorProps<SimpleOptions>>
           </div>
         </div>
 
-        <div className="section gf-form-group"  style={{ display: 'block', width: '100%' }}>
+        <div className="section gf-form-group">
           <h5 className="section-heading">on Click Function</h5>
-          <div className="gf-form-inline"  style={{ display: 'block', width: '100%' }}>
+          <div className="gf-form-inline">
             <div className="gf-form">
             <AceEditor
             mode="javascript"
             theme={theme}
             name="dashboard_onclick"
             height="150px"
-            width="100%"
             value={this.props.options.onclick}
             onBlur={this.onClickChanged}
           />
             </div>
           </div>
         </div>
-      </PanelOptionsGroup>
+      </div>
     );
   }
 }
