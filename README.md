@@ -39,8 +39,8 @@ If no script is provided, the panel will use only *Data*, *Layout* and *Config* 
 
 Plotly panel editor :
 
-![Editor](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/img/editor.png)
+![Editor](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/editor.png)
 
 Example of a wind rose chart :
 
-![Panel](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/img/panel.png)
+![Panel](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/panel.png)
