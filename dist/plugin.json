@@ -16,13 +16,16 @@
     "links": [
       {"name": "Website", "url": "https://github.com/ae3e/ae3e-plotly-panel"}
     ],
-    "screenshots": [],
+    "screenshots": [
+      {"name": "Editor", "path": "img/editor.png"},
+      {"name": "Panel", "path": "img/panel.png"}
+    ],
     "version": "0.2.1",
-    "updated": "2020-07-31"
+    "updated": "2020-08-28"
   },
 
   "dependencies": {
-    "grafanaVersion": "7.1.x",
+    "grafanaDependency": "7.1.x",
     "plugins": []
   }
 }

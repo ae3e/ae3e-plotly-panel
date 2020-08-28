@@ -1,4 +1,4 @@
-# Plotly Panel
+# <img src="src/img/plotly.svg" width="30" style="margin-bottom:-5px"> Plotly Panel
 
 [https://github.com/ae3e/ae3e-plotly-panel](https://github.com/ae3e/ae3e-plotly-panel)
 
@@ -37,5 +37,10 @@ Object returned by the script and JSON provided in the  *Data*, *Layout* and *Co
 
 If no script is provided, the panel will use only *Data*, *Layout* and *Config* fields.
 
-![Editor](/img/editor.png)
-![Panel](/img/panel.png)
+Plotly panel editor :
+
+![Editor](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/editor.png)
+
+Example of a wind rose chart :
+
+![Panel](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/panel.png)
