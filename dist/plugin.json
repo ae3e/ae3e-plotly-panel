@@ -21,7 +21,7 @@
       {"name": "Panel", "path": "img/panel.png"}
     ],
     "version": "0.2.1",
-    "updated": "2020-08-28"
+    "updated": "2020-09-01"
   },
 
   "dependencies": {

@@ -15,6 +15,10 @@ export const defaults: SimpleOptions = {
     },
     "paper_bgcolor": "rgba(0,0,0,0)",
     "plot_bgcolor": "rgba(0,0,0,0)",
+    "margin":{
+      "t":30,
+      "b":20
+    },
     "xaxis": {
         "type": "date"
     }
@@ -37,6 +41,5 @@ var trace = {
   
 return {data:[trace],layout:{title:'My Chart'}};`,
   onclick:`console.log(data)
-//Not working if variable is a Textbox : Maximum call stack size exceeded. Grafana bug?
-window.updateVariables({query:{'var-project':'toti'}, partial: true})`
+window.updateVariables({query:{'var-project':'test'}, partial: true})`
 };
