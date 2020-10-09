@@ -25,14 +25,13 @@ interface Props extends PanelProps<SimpleOptions> {}
 
 export class SimplePanel extends PureComponent<Props> {
   render() {
-    console.log(this);
-    console.log(this.props.replaceVariables('$distance'));
-    //console.log(this.props.replaceVariables('$__to'+' '+'$__from'));
-    
-    console.log(templateSrv.getVariables())
     //Get all variables
     const context = {
-      interval: templateSrv.getBuiltInIntervalValue(),//dataSource.templateSrv.builtIns.__interval.value,
+      //interval: templateSrv.getBuiltInIntervalValue(),//dataSource.templateSrv.builtIns.__interval.value,
+      __from:this.props.replaceVariables('$__from'),
+      __to:this.props.replaceVariables('$__to'),
+      __interval:this.props.replaceVariables('$__interval'),
+      __interval_ms:this.props.replaceVariables('$__interval_ms')
     } as any;
     templateSrv.getVariables().forEach((elt: any)=>{
       context[elt.name]=elt.current.text;
@@ -77,7 +76,7 @@ export class SimplePanel extends PureComponent<Props> {
       });
     }*/
 
-    console.log(merge(this.props.options.data,parameters.data,{ arrayMerge: combineMerge }));
+    //console.log(merge(this.props.options.data,parameters.data,{ arrayMerge: combineMerge }));
     //let layout = { ...this.props.options.layout, autosize: true, paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'transparent', height: this.props.height, title: this.props.options.title }
     let layout = { ...this.props.options.layout, autosize: true, height: this.props.height };
   

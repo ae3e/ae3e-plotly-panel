@@ -7,6 +7,9 @@ export interface SimpleOptions {
   onclick:string;
 }
 
+export type EditorCodeType = string | undefined;
+export type EditorLanguageType = 'javascript' | 'html' | 'json' | undefined;
+
 export const defaults: SimpleOptions = {
   title: 'title',
   layout: {
