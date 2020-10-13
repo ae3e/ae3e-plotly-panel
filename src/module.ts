@@ -1,5 +1,5 @@
 import { PanelPlugin } from '@grafana/data';
-import { SimpleOptions } from './types';
+import { SimpleOptions, defaults } from './types';
 import { SimplePanel } from './SimplePanel';
 import {PanelOptionCode} from './PanelOptionCode';
 
@@ -15,6 +15,7 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
             settings: {
                 language: 'json',
             },
+            defaultValue: defaults.data,
         })
         .addCustomEditor({
             id: 'layout',
@@ -26,6 +27,7 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
             settings: {
                 language: 'json',
             },
+            defaultValue: defaults.layout,
         })
         .addCustomEditor({
             id: 'config',
@@ -37,6 +39,7 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
             settings: {
                 language: 'json',
             },
+            defaultValue: defaults.config,
         })
         .addCustomEditor({
             id: 'script',
@@ -44,7 +47,7 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
             name: 'Script',
             description: `
             Script executed whenever new data is available.
-            
+
             Must return an object with one or more of the following properties : data, layout, config
             f(data, variables){...your code...}
             `,
@@ -53,6 +56,7 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
             settings: {
                 language: 'javascript',
             },
+            defaultValue: defaults.script,
         })
         .addCustomEditor({
             id: 'onclick',
@@ -66,5 +70,6 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
             settings: {
                 language: 'javascript',
             },
+            defaultValue: defaults.onclick,
         })
 });
