@@ -41,13 +41,6 @@ Plotly panel editor :
 
 ![Editor](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/editor.png)
 
-Example of a wind rose chart :
+Example of charts :
 
 ![Panel](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/panel.png)
-
-Example of heatmap and 3D chart :
-
-![Panel](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/panel.png2)
-
-Example of custom chart and boxplot :
-![Panel](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/panel.png3)
