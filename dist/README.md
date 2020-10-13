@@ -1,8 +1,8 @@
-# <img src="src/img/plotly.svg" width="30" style="margin-bottom:-5px"> Plotly Panel
+# Plotly Panel
 
 [https://github.com/ae3e/ae3e-plotly-panel](https://github.com/ae3e/ae3e-plotly-panel)
 
-Render chart from any datasource with [Plotly](https://plotly.com/javascript/) (An open source javascript graphing library)
+Render any kind of charts from any datasource with [Plotly](https://plotly.com/javascript/) (An open source javascript graphing library)
 
 Unlike the [natel-plotly-panel](https://github.com/NatelEnergy/grafana-plotly-panel), this plugin is not limited to specific types of charts. But, on the other hand, the user interface is really rough in order to let users to set all options available in Plotly.
 
@@ -10,7 +10,7 @@ The *Data*, *Layout* and *Config* fields match the common parameters described i
 
 Data provided by the datasource can be transformed via a user-defined script before to be injected in the Plotly chart. The script includes 2 arguments :
 - `data` : Data returns by the datasource
-- `variables` : Object that contains [Grafana's variables](https://grafana.com/docs/grafana/latest/reference/templating/) available in the current dashboard
+- `variables` : Object that contains [Grafana's variables](https://grafana.com/docs/grafana/latest/variables/) available in the current dashboard (user variables and few global variables : `__from`, `__to`, `__interval` and `__interval_ms`). 
 
 The script must return an object with one or more of the following properties : `data`, `layout`, `config`.
 
@@ -41,6 +41,6 @@ Plotly panel editor :
 
 ![Editor](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/editor.png)
 
-Example of a wind rose chart :
+Example of charts :
 
 ![Panel](https://raw.githubusercontent.com//ae3e/ae3e-plotly-panel/master/src/img/panel.png)
