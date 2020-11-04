@@ -1,5 +1,10 @@
 import { PanelPlugin } from '@grafana/data';
 import { SimpleOptions, defaults } from './types';
+//Import an entire module for side effects only, without importing anything.
+//This runs the module's global code, but doesn't actually import any values.
+//It set global variable for Plotly before loading plotly.js
+import 'utils'
+
 import { SimplePanel } from './SimplePanel';
 import {PanelOptionCode} from './PanelOptionCode';
 
