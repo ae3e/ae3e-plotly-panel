@@ -19,8 +19,6 @@
   "dependencies": {
     "deepmerge": "^4.2.2",
     "plotly.js": "1.52.1",
-    "@monaco-editor/react": "^3.6.3",
-    "react-chart-editor": "0.41.0",
     "react-plotly.js": "2.4.0"
   },
   "resolutions": {
