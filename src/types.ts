@@ -33,7 +33,7 @@ export const defaults: SimpleOptions = {
     {
       type: 'scatter',
       mode: 'lines',
-      line: { color: 'red', with:2 },
+      line: { color: 'red', width:2 },
     },
   ],
   script: `console.log(data)
