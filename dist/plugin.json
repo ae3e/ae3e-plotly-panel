@@ -20,8 +20,8 @@
       {"name": "Editor", "path": "img/editor.png"},
       {"name": "Panel", "path": "img/panel.png"}
     ],
-    "version": "0.3.2",
-    "updated": "2020-11-04"
+    "version": "0.3.3",
+    "updated": "2020-12-18"
   },
 
   "dependencies": {
