@@ -1,6 +1,6 @@
 {
   "name": "ae3e-plotly-panel",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Grafana Plotly Panel",
   "scripts": {
     "build": "grafana-toolkit plugin:build",
