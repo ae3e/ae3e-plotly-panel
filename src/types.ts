@@ -1,10 +1,10 @@
 export interface SimpleOptions {
   title: string;
   layout: object;
-  config:object;
+  config: object;
   data: any[];
   script: string;
-  onclick:string;
+  onclick: string;
 }
 
 export type EditorCodeType = string | undefined;
@@ -13,27 +13,27 @@ export type EditorLanguageType = 'javascript' | 'html' | 'json' | undefined;
 export const defaults: SimpleOptions = {
   title: 'title',
   layout: {
-    "font": {
-        "color": "darkgrey"
+    font: {
+      color: 'darkgrey',
     },
-    "paper_bgcolor": "rgba(0,0,0,0)",
-    "plot_bgcolor": "rgba(0,0,0,0)",
-    "margin":{
-      "t":30,
-      "b":20
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    margin: {
+      t: 30,
+      b: 20,
     },
-    "xaxis": {
-        "type": "date"
-    }
+    xaxis: {
+      type: 'date',
+    },
   },
-  config:{
-    "displayModeBar": false
+  config: {
+    displayModeBar: false,
   },
   data: [
     {
       type: 'scatter',
       mode: 'lines',
-      line: { color: 'red', width:2 },
+      line: { color: 'red', width: 2 },
     },
   ],
   script: `console.log(data)
@@ -43,6 +43,6 @@ var trace = {
 };
   
 return {data:[trace],layout:{title:'My Chart'}};`,
-  onclick:`console.log(data)
-window.updateVariables({query:{'var-project':'test'}, partial: true})`
+  onclick: `console.log(data)
+window.updateVariables({query:{'var-project':'test'}, partial: true})`,
 };
