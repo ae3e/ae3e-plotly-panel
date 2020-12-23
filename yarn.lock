@@ -11112,7 +11112,7 @@
     "two-product" "^1.0.0"
     "uniq" "^1.0.0"
 
-"plotly.js@1.52.1":
+"plotly.js@>1.34.0", "plotly.js@1.52.1":
   "integrity" "sha512-GLNwAu20zwRZrfjrSRUZHXyDulDRh1yfPBV5SLqy5AdGefb6CK2QCBbMcGlhV2P14oJwQ8vd1wqTZVZE9xQ9Rw=="
   "resolved" "https://registry.npmjs.org/plotly.js/-/plotly.js-1.52.1.tgz"
   "version" "1.52.1"
@@ -12513,10 +12513,10 @@
     "monaco-editor" "*"
     "prop-types" "^15.7.2"
 
-"react-plotly.js@2.4.0":
-  "integrity" "sha512-BCkxMe8yWqu3nP/hw9A1KCIuoL67WV5/k68SL9yhEkF6UG+pAuIev9Q3cMKtNkQJZhsYFpOmlqrpPjIdUFACOQ=="
-  "resolved" "https://registry.npmjs.org/react-plotly.js/-/react-plotly.js-2.4.0.tgz"
-  "version" "2.4.0"
+"react-plotly.js@2.5.1":
+  "integrity" "sha512-Oya14whSHvPsYXdI0nHOGs1pZhMzV2edV7HAW1xFHD58Y73m/LbG2Encvyz1tztL0vfjph0JNhiwO8cGBJnlhg=="
+  "resolved" "https://registry.npmjs.org/react-plotly.js/-/react-plotly.js-2.5.1.tgz"
+  "version" "2.5.1"
   dependencies:
     "prop-types" "^15.7.2"
 
@@ -12576,7 +12576,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@>=15.0.0 <17.0.0", "react@16.12.0":
+"react@>=15.0.0 <17.0.0", "react@>0.13.0", "react@16.12.0":
   "integrity" "sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.12.0.tgz"
   "version" "16.12.0"
