@@ -27,3 +27,5 @@ e2e-results/
 
 token
 
+# IntelliJ IDEA
+.idea/
