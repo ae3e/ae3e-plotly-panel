@@ -19,8 +19,9 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
             category: ['Plotly'],
             settings: {
                 language: 'json',
+                initValue:defaults.data
             },
-            defaultValue: defaults.data,
+            defaultValue: null//defaults.data,
         })
         .addCustomEditor({
             id: 'layout',
@@ -31,8 +32,9 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
             category: ['Plotly'],
             settings: {
                 language: 'json',
+                initValue: defaults.layout,
             },
-            defaultValue: defaults.layout,
+            defaultValue: null//defaults.layout,
         })
         .addCustomEditor({
             id: 'config',
@@ -43,8 +45,9 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
             category: ['Plotly'],
             settings: {
                 language: 'json',
+                initValue: defaults.config,
             },
-            defaultValue: defaults.config,
+            defaultValue: null//defaults.config,
         })
         .addCustomEditor({
             id: 'script',

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { PanelProps } from '@grafana/data';
 import { getTemplateSrv, getLocationSrv } from '@grafana/runtime'
-import { SimpleOptions } from 'types';
+import { SimpleOptions, defaults } from 'types';
 import merge from 'deepmerge';
 import _ from 'lodash';
 
@@ -39,12 +39,16 @@ export class SimplePanel extends PureComponent<Props> {
     let parameters: any;
     //const NbValues = data.series[0].rows.length;
 
+    let config = this.props.options.config || defaults.config
+    let data = this.props.options.data || defaults.data
+    let layout = this.props.options.layout || defaults.layout;
+
     try {
       if (this.props.options.script !== '') {
         var f = new Function('data,variables', this.props.options.script);
         parameters = f(this.props.data, context);
       }else{
-        parameters = [this.props.options.data,this.props.options.layout,this.props.options.config];
+        parameters = [this.props.options.data,layout,config];
       }
     } catch (e) {
       console.log(e);
@@ -75,22 +79,19 @@ export class SimplePanel extends PureComponent<Props> {
         });
       });
     }*/
-
-    //console.log(merge(this.props.options.data,parameters.data,{ arrayMerge: combineMerge }));
-    //let layout = { ...this.props.options.layout, autosize: true, paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'transparent', height: this.props.height, title: this.props.options.title }
-    let layout = { ...this.props.options.layout, autosize: true, height: this.props.height };
   
+    layout = {...layout, autosize: true, height: this.props.height};
     return (
       <Plot
         style={{
           width: '100%',
           height: '100%',
         }}
-        data={parameters.data?merge(this.props.options.data,parameters.data,{ arrayMerge: combineMerge }):this.props.options.data}
+        data={parameters.data?merge(data,parameters.data,{ arrayMerge: combineMerge }):data}
         onInitialized={(figure: any, graphDiv: any) => this.setState({ figure: figure, graphDiv: graphDiv })}
         //layout={ {autosize:true, height:this.props.height, title: this.props.options.title} }
         layout={parameters.layout?merge(layout,parameters.layout):layout}
-        config={parameters.config?merge(this.props.options.config,parameters.config):this.props.options.config}
+        config={parameters.config?merge(config,parameters.config):config}
         useResizeHandler={true}
         onClick={data=>{
           //console.log(data)

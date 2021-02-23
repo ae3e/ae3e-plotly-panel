@@ -11,7 +11,7 @@ export const PanelOptionCode: React.FC<Props> = ({ value, item, onChange }) => {
     }
   return <CodeEditor
     language={item.settings?.language}
-    value={value}
+    value={value==='null'?JSON.stringify(item.settings?.initValue,null,2):value}
     height="200px"
     onBlur={code => {
       if(item.settings?.language==='json' && code){
