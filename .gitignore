@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 node_modules/
+dist/
 
 # Runtime data
 pids
@@ -26,4 +27,7 @@ ci/
 e2e-results/
 
 token
+ae3e-plotly-panel
 
+ae3e-plotly-panel-*.zip
+ae3e-plotly-panel-*.zip.md5
