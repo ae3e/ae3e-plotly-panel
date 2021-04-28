@@ -12,7 +12,7 @@ Data provided by the datasource can be transformed via a user-defined script bef
 - `data` : Data returns by the datasource
 - `variables` : Object that contains [Grafana's variables](https://grafana.com/docs/grafana/latest/variables/) available in the current dashboard (user variables and few global variables : `__from`, `__to`, `__interval` and `__interval_ms`). 
 
-The script must return an object with one or more of the following properties : `data`, `layout`, `config`.
+The script must return an object with one or more of the following properties : `data`, `layout`, `config` and `frames`.
 
 example :
 ```javascript
