@@ -3,6 +3,7 @@ export interface SimpleOptions {
   layout: object;
   config:object;
   data: any[];
+  frames: any[];
   script: string;
   onclick:string;
 }
@@ -36,6 +37,7 @@ export const defaults: SimpleOptions = {
       line: { color: 'red', width:2 },
     },
   ],
+  frames:[],
   script: `console.log(data)
 var trace = {
   x: data.series[0].fields[0].values.buffer,

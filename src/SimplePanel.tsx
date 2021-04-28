@@ -42,6 +42,7 @@ export class SimplePanel extends PureComponent<Props> {
     let config = this.props.options.config || defaults.config
     let data = this.props.options.data || defaults.data
     let layout = this.props.options.layout || defaults.layout;
+    let frames = this.props.options.frames || defaults.frames;
 
     try {
       if (this.props.options.script !== '') {
@@ -88,6 +89,7 @@ export class SimplePanel extends PureComponent<Props> {
           height: '100%',
         }}
         data={parameters.data?merge(data,parameters.data,{ arrayMerge: combineMerge }):data}
+        frames={parameters.frames?merge(data,parameters.frames,{ arrayMerge: combineMerge }):frames}
         onInitialized={(figure: any, graphDiv: any) => this.setState({ figure: figure, graphDiv: graphDiv })}
         //layout={ {autosize:true, height:this.props.height, title: this.props.options.title} }
         layout={parameters.layout?merge(layout,parameters.layout):layout}
