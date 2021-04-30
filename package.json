@@ -19,9 +19,11 @@
     "@grafana/ui": "7.3.5"
   },
   "dependencies": {
+    "@emotion/css": "^10.0.27",
     "deepmerge": "^4.2.2",
     "plotly.js": "1.58.4",
-    "react-plotly.js": "2.5.1"
+    "react-plotly.js": "2.5.1",
+    "react-virtualized-auto-sizer": "^1.0.5"
   },
   "resolutions": {
     "@babel/preset-env": "7.5.5"
