@@ -12227,7 +12227,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@16.12.0":
+"react-dom@^15.3.0 || ^16.0.0-alpha || ^17.0.0", "react-dom@16.12.0":
   "integrity" "sha512-LMxFfAGrcS3kETtQaCkTKjMiifahaMySFDn71fZUNpPHZQEzmk/GiAeIT8JSOrHB23fnuCOMruL2a8NYlw+8Gw=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.12.0.tgz"
   "version" "16.12.0"
@@ -12357,7 +12357,12 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@>=15.0.0 <17.0.0", "react@>0.13.0", "react@16.12.0":
+"react-virtualized-auto-sizer@^1.0.5":
+  "integrity" "sha512-kivjYVWX15TX2IUrm8F1jaCEX8EXrpy3DD+u41WGqJ1ZqbljWpiwscV+VxOM1l7sSIM1jwi2LADjhhAJkJ9dxA=="
+  "resolved" "https://registry.npmjs.org/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.5.tgz"
+  "version" "1.0.5"
+
+"react@^15.3.0 || ^16.0.0-alpha || ^17.0.0", "react@>=15.0.0 <17.0.0", "react@>0.13.0", "react@16.12.0":
   "integrity" "sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.12.0.tgz"
   "version" "16.12.0"
