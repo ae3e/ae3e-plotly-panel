@@ -7,16 +7,16 @@
     "test": "grafana-toolkit plugin:test",
     "dev": "grafana-toolkit plugin:dev --watch",
     "sign": "npx @grafana/toolkit plugin:sign",
-    "md5": "certutil -hashfile README.md MD5"
+    "md5": "certutil -hashfile ae3e-plotly-panel-%npm_package_version%.zip MD5"
   },
   "author": "AE3E",
   "license": "Apache-2.0",
   "devDependencies": {
     "@babel/preset-env": "7.5.5",
-    "@grafana/data": "7.3.5",
-    "@grafana/runtime": "7.3.5",
-    "@grafana/toolkit": "7.3.5",
-    "@grafana/ui": "7.3.5"
+    "@grafana/data": "7.5.5",
+    "@grafana/runtime": "7.5.5",
+    "@grafana/toolkit": "7.5.5",
+    "@grafana/ui": "7.5.5"
   },
   "dependencies": {
     "@emotion/css": "^10.0.27",
