@@ -3,7 +3,7 @@ import React from 'react';
 import { StandardEditorProps } from '@grafana/data';
 import { CodeEditor, useTheme } from '@grafana/ui'
 import AutoSizer from 'react-virtualized-auto-sizer';
-import css from '@emotion/css'
+import {css} from 'emotion'
 
 interface Props extends StandardEditorProps<string, any, any> { }
 

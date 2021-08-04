@@ -13,11 +13,11 @@ import Plotly from 'plotly.js/dist/plotly';
 declare global {
   interface Window {
     Plotly: any;
-    updateVariables: any;
+    //LocationSrv: any;
   }
 }
 window.Plotly = Plotly;
-window.updateVariables = getLocationSrv().update;
+//window.LocationSrv = getLocationSrv();
 
 let templateSrv:any = getTemplateSrv();
 
@@ -117,8 +117,8 @@ export class SimplePanel extends PureComponent<Props> {
             useResizeHandler={true}
             onClick={data=>{
               //console.log(data)
-              var f = new Function('data', this.props.options.onclick);
-              f(data);
+              var f = new Function('data', 'getLocationSrv','getTemplateSrv', this.props.options.onclick);
+              f(data,getLocationSrv,getTemplateSrv);
             }}
           ></Plot>
         
