@@ -1,5 +1,8 @@
 # Plotly Panel
 
+[![Marketplace](https://img.shields.io/badge/dynamic/json?logo=grafana&color=F47A20&label=marketplace&prefix=v&query=%24.items%5B%3F%28%40.slug%20%3D%3D%20%22ae3e-plotly-panel%22%29%5D.version&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins)](https://grafana.com/grafana/plugins/ae3e-plotly-panel)
+[![Downloads](https://img.shields.io/badge/dynamic/json?logo=grafana&color=F47A20&label=downloads&query=%24.items%5B%3F%28%40.slug%20%3D%3D%20%22ae3e-plotly-panel%22%29%5D.downloads&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins)](https://grafana.com/grafana/plugins/ae3e-plotly-panel)
+
 [https://github.com/ae3e/ae3e-plotly-panel](https://github.com/ae3e/ae3e-plotly-panel)
 
 Render any kind of charts from any datasource with [Plotly](https://plotly.com/javascript/) (An open source javascript graphing library)
