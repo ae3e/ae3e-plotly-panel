@@ -15,7 +15,7 @@
     "@babel/preset-env": "7.5.5",
     "@grafana/data": "8.0.3",
     "@grafana/runtime": "8.0.3",
-    "@grafana/toolkit": "8.0.3",
+    "@grafana/toolkit": "8.5.20",
     "@grafana/ui": "8.0.3"
   },
   "dependencies": {
